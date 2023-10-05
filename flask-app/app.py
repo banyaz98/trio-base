@@ -18,6 +18,7 @@ class Users(db.Model):
 	email = db.Column(db.String(150), nullable=False, unique=True)
 	def __repr__(self):
 		return ''.join(['User ID: ', str(self.id), '\r\n', 'Email: ', self.email, ' Name: ', self.first_name, ' ', self.last_name, '\n'])
+		return f"<h1>Hello {name}.</h1>\n\n<h2>I'm currently running in {hostname}.</h2>\n\n<h2> {name} needs a coffee</h2>"
 
 
 @app.route('/')
